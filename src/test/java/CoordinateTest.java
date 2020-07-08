@@ -12,6 +12,6 @@ public class CoordinateTest  {
                 "2020-12-30T05:15Z",
                 60
         );
-        Assertions.assertTrue(schedule.getFrequency() > 50);
+        Assertions.assertTrue(schedule.getFrequency() < 50);
     }
 }
