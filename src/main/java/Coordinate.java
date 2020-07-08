@@ -1,3 +1,9 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
+
 public class Coordinate {
     public static final int MAX_FREQUENCY = 1440;
     public static final int MIN_FREQUENCY = 5;
@@ -34,5 +40,25 @@ public class Coordinate {
         this.startingTimestamp = startingTimestamp;
         this.endingTimestamp = endingTimestamp;
         this.frequency = frequency;
+    }
+    private Date parseTimestamp(String timestamp) {
+        Date date = null;
+
+        SimpleDateFormat format =
+                new SimpleDateFormat("yyyy-MM-dd'T' HH:mm'Z'",
+                        Locale.getDefault());
+        format.setTimeZone(TimeZone.getTimeZone("UTC"));
+        try {
+            date = format.parse(timestamp);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+    public Date getStartingTimestampAsDate() {
+        return parseTimestamp(startingTimestamp);
+    }
+    public Date getEndingTimestampAsDate() {
+        return parseTimestamp(endingTimestamp);
     }
 }
