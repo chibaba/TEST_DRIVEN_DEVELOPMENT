@@ -25,7 +25,7 @@ public class CoordinateTest  {
     @DisplayName("Timestamp will be null if not formatted correctly")
     void testStartingTimestamps() {
         Coordinate schedule = new Coordinate(
-                "2020/12/15T15:32Z",
+                "2020/12/5T15:32Z",
                 "20202-12-15T15:35Z",
                 60
         );
@@ -34,5 +34,20 @@ public class CoordinateTest  {
         Assertions.assertNull(starting);
     }
     @Test
+    @DisplayName("Ending timestamp must be after starting")
+    void testTimestamps() {
+        Coordinate schedule = new Coordinate(
+                    "2020-12-15T15:32Z",
+                "2020-12-15T15:32Z",
+                60
+        );
+        Date starting = schedule.getStartingTimestampAsDate();
+        Assertions.assertNotNull(starting);
+
+        Date ending = schedule.getEndingTimestampAsDate();
+        Assertions.assertNotNull(ending);
+        
+        Assertions.assertTrue(ending.after(starting));
+    }
 
 }
