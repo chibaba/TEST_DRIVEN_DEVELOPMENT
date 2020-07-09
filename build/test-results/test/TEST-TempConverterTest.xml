@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TempConverterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-07-09T01:17:28" hostname="chinedu-ThinkPad-L440" time="0.019">
+  <properties/>
+  <testcase name="testFahrenheitWhenHot()" classname="TempConverterTest" time="0.016"/>
+  <testcase name="testFahrenheitWhenCold()" classname="TempConverterTest" time="0.001"/>
+  <system-out><![CDATA[Before all tests
+Before each test
+After each test
+Before each test
+After each test
+After all tests
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

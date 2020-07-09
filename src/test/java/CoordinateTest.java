@@ -46,7 +46,7 @@ public class CoordinateTest  {
 
         Date ending = schedule.getEndingTimestampAsDate();
         Assertions.assertNotNull(ending);
-        
+
         Assertions.assertTrue(ending.after(starting));
     }
 
