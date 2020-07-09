@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WorkFlowMonitorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-07-09T08:04:36" hostname="chinedu-ThinkPad-L440" time="0.034">
+  <properties/>
+  <testcase name="testFailure()" classname="WorkFlowMonitorTest" time="0.03"/>
+  <testcase name="testSuccess()" classname="WorkFlowMonitorTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
